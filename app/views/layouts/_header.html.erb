@@ -1,0 +1,27 @@
+<header>
+  <div class="navber navber-expend-lg navber-dark ">
+    <div class="container">
+      <a class="navber-brand" href="/" ><span>Bookers</span></a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+         <ul class="navbar-nav ml-auto">
+           <% if user_signed_in? %>
+             <li>
+               <%= link_to "Home",root_path %>
+             </li>
+             <li>
+               <%= link_to "About",home_about_path %>
+             </li>
+           <% else %>
+               <li>
+                   <%= link_to "Home",root_path %>
+               </li>
+
+           <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
